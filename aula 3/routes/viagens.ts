@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 })
 
 router.post("/", async (req, res) => {
-    const {destino, transporte, duracao, preco = null} = req.body
+    const {destino, transporte, duracao, preco} = req.body
 
     if (!destino || !transporte || !duracao || !preco) {
         res.status(400).json({erro: "Informe todos os dados"})
